@@ -1,0 +1,26 @@
+
+basic_fmt0: "^(get) ([a-zA-Z0-9_.]{1,40})$"                        # e.g., get var 
+basic_fmt1: "^(get) ([a-zA-Z0-9_.]{1,40}) ([a-zA-Z0-9_]{1,40})$"   # e.g., get var timestamp
+basic_fmt2: "^(set) ([a-zA-Z0-9_.]{1,40}) ([a-zA-Z0-9_.-]{1,19})$" # e.g., set var -123.456
+basic_fmt3: "^(help)$"
+basic_fmt4: "^(quit)$"
+basic_fmt5: "^(history)$"
+basic_fmt6: "^(!)([0-9]{1,3})$"
+
+macro_fmt0: "^(q)$"
+macro_def0: [ "quit" ]
+macro_fmt1: "^(h)$"
+macro_def1: [ "history" ]
+macro_fmt2: "^(fini)$"  # finish
+macro_def2: [ "set ecat down", "set can off", "set CAN.pub2agent 0" ]
+macro_fmt3: "^(init)$" # start-up
+macro_def3: [ "set ecat up", "set can up", "set ecat on", "set can on", "set CAN.pub2agent 1", "set motion ready2start" ]
+macro_fmt4: "^(down)$" # vcsdown
+macro_def4: [ "set can off" ]
+macro_fmt5: "^(off)$"  # vcsoff
+macro_def5: [ "set ecat down", "set CAN.pub2agent 0" ]
+macro_fmt6: "^(on)$"   # vcson
+macro_def6: [ "set ecat up", "set ecat on", "set CAN.pub2agent 1", "set motion ready2start" ]
+macro_fmt7: "^(up)$"   # vcsup
+macro_def7: [ "set can up", "set can on", "set hvi up" ]
+

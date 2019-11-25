@@ -1,0 +1,5 @@
+<launch>
+  <!-- ichthus_controller -->
+  <rosparam file="$(find ichthus_controller)/cfg/command_list.yaml"/>	 
+  <node pkg="ichthus_controller" type="ichthus_controller" name="ichthus_controller" output="screen"/>
+</launch>

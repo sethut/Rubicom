@@ -1,0 +1,36 @@
+num_motors : 1
+motor_id_pedal_accel : 0
+motor_id_pedal_decel : 1
+motor_id_lidar_front : 2
+motor_id_lidar_left  : 3
+motor_id_lidar_right : 4
+motor_id_steer_wheel : 5
+motor_id_gear_stick  : 6
+
+pedal_accel_pos : { lower: 0, upper: 33000, origin: 0 }
+pedal_decel_pos : { lower: 0, upper: 110000, origin: 25000 }
+steer_wheel_pos : { lower: -228000, upper: 228000, origin: 0, step: 949 } # sc_pos_per_degree : 949
+gear_stick_pos  : { park: 0, reverse: 1100000, neutral: 1900000, drive: 2450000 }
+
+lidar_front_deg : { lower: 0, upper: 150, step: 2343 }
+lidar_left_deg  : { lower: 0, upper: 150, step: 2343 }
+lidar_right_deg : { lower: -150, upper: 0, step: 2343 }
+
+motion_pull_over     : { jerk: -1, de_step: 500, margin: 1 }
+motion_pedal_homing  : { ac_step: 100, de_step: 100, margin: 100 }
+motion_lidar_homing  : { left: 0, right: 0, front: 0 }
+motion_lidar_mapping : { left: 53, right: -48, front: 90 }
+motion_lidar_driving : { left: 53, right: -48, front: 90 }
+motion_lidar_parking : { left: 20, right: -28, front: 90 }
+
+cc_gains_accel : { Kp:  600, Ki:  25, Kd:  300 }
+cc_gains_decel : { Kp: 3000, Ki: 200, Kd: 1000 }
+#cc_gains_accel_obd : { Kp:  600, Ki:  25, Kd:  300 }
+#cc_gains_decel_obd : { Kp: 3000, Ki: 200, Kd: 1000 }
+#cc_gains_accel_can : { Kp: 3000, Ki:   7, Kd:  300 }
+#cc_gains_decel_can : { Kp: 5000, Ki:   2, Kd:  500 }
+cc_switch_margins  : { lower: 50, upper: 120 }
+cc_target_velocity : { lower: -2, upper: 100 }
+cc_integral_base   : { origin: 5000, step: 1000 }
+sc_vehicle_geometry : { min_radius : 517, wheel_base: 265 }
+
