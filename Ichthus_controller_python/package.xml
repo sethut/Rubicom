@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>ichthus_controller_python version</name>
+  <name>ichthus_controller_python</name>
   <version>0.1.0</version>
   <description>The ichthus controller package</description>
   <maintainer email="kim.kanghee@gmail.com">Kanghee Kim</maintainer>
